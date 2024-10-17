@@ -1,0 +1,98 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+}
+
+.neon-title {
+    font-size: 3rem;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    margin-bottom: 30px;
+}
+
+.neon-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.neon-table th, .neon-table td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.neon-table th {
+    background-color: #222;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.neon-table td {
+    background-color: #1e1e1e;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.alert {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #444;
+    color: #ffcccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ff3333;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 5px 10px; 
+    background-color: #3c3c3c;
+    color: white;
+    text-decoration: none;
+    font-size: 14px; 
+    border-radius: 5px; 
+}
+
+.pagination .active {
+    background-color: #4caf50;
+}
+
+.pagination .disabled {
+    color: #ccc;
+}
+
+.pagination svg {
+    width: 12px; 
+    height: 12px; 
+}

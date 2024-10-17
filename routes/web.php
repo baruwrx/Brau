@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\brau123;
+use App\Http\Controllers\VapeController;
+
+Route::resource('vapes', VapeController::class);
 
 Route::get('/', function () {
     return view('welcome');
