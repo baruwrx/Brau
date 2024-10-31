@@ -96,3 +96,88 @@ body {
     width: 12px; 
     height: 12px; 
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.create-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 0, 150, 0.4);
+}
+
+.neon-title {
+    font-size: 24px;
+    color: #ff0096;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 8px rgba(255, 0, 150, 0.8);
+}
+
+.neon-form label {
+    color: #ff0096;
+    margin-top: 10px;
+}
+
+.neon-form input,
+.neon-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ff0096;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+.neon-form input:focus,
+.neon-form textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 0, 150, 0.6);
+}
+
+.btn.neon-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0096;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn.neon-btn:hover {
+    background-color: #e6007a;
+}
+
+.error-messages {
+    background-color: #ff4c4c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.error-messages ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.error-messages li {
+    color: #ffffff;
+}
+

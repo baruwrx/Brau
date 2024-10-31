@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>Agregar Nuevo Vape</h1>
+    
     @if ($errors->any())
         <div>
             <ul>
@@ -14,6 +15,15 @@
 
     <form action="{{ route('vapes.store') }}" method="POST">
         @csrf
+        
+        <label for="category">Categoría:</label>
+        <select name="category_id" required>
+            <option value="">Selecciona una categoría</option>
+            @foreach($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+
         <label for="name">Nombre del Vape:</label>
         <input type="text" id="name" name="name" value="{{ old('name') }}" required>
         

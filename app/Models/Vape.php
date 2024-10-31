@@ -9,5 +9,15 @@ class Vape extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'price', 'stock'];
+    protected $fillable = ['name', 'description', 'price', 'stock', 'category_id'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function comments()
+{
+    return $this->hasMany(Comment::class);
+}
 }

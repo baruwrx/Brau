@@ -42,6 +42,28 @@
             </tbody>
         </table>
 
+        <td>
+            <a href="{{ route('vapes.show', $vape) }}" class="btn neon-btn">Ver Detalles</a>
+            <a href="{{ route('vapes.edit', $vape) }}" class="btn neon-btn">Editar</a>
+            <form action="{{ route('vapes.destroy', $vape) }}" method="POST" style="display:inline;">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn neon-btn">Eliminar</button>
+            </form>
+        </td>
+        
+
+        <form method="GET" action="{{ route('vapes.index') }}">
+            <input type="text" name="search" placeholder="Buscar producto">
+            <select name="category">
+                <option value="">Todas las categorías</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+
         <div class="pagination">
             {{ $vapes->links() }}
         </div>
@@ -49,4 +71,3 @@
 @endsection
 
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-

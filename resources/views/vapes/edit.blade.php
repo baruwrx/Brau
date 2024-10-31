@@ -19,4 +19,11 @@
 
         <button type="submit">Update</button>
     </form>
+    <label for="category">Categoría:</label>
+<select name="category_id" required>
+    <option value="">Selecciona una categoría</option>
+    @foreach($categories as $category)
+        <option value="{{ $category->id }}" {{ isset($vape) && $vape->category_id == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+    @endforeach
+</select>
 @endsection
