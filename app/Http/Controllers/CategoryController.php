@@ -7,20 +7,20 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    // Mostrar una lista de categorías
+    
     public function index()
     {
-        $categories = Category::all(); // Obtener todas las categorías
+        $categories = Category::all(); 
         return view('categories.index', compact('categories'));
     }
 
-    // Mostrar el formulario para crear una nueva categoría
+  
     public function create()
     {
         return view('categories.create');
     }
 
-    // Almacenar una nueva categoría en la base de datos
+   
     public function store(Request $request)
     {
         $request->validate([
@@ -31,13 +31,11 @@ class CategoryController extends Controller
         return redirect()->route('categories.index')->with('success', 'Categoría creada correctamente.');
     }
 
-    // Mostrar el formulario para editar una categoría existente
     public function edit(Category $category)
     {
         return view('categories.edit', compact('category'));
     }
 
-    // Actualizar una categoría existente en la base de datos
     public function update(Request $request, Category $category)
     {
         $request->validate([
@@ -48,7 +46,6 @@ class CategoryController extends Controller
         return redirect()->route('categories.index')->with('success', 'Categoría actualizada correctamente.');
     }
 
-    // Eliminar una categoría existente de la base de datos
     public function destroy(Category $category)
     {
         $category->delete();

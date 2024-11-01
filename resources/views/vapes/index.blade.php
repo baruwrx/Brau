@@ -30,6 +30,7 @@
                         <td>{{ $vape->price }}</td>
                         <td>{{ $vape->stock }}</td>
                         <td>
+                            <a href="{{ route('vapes.show', $vape) }}" class="btn neon-btn">Ver Detalles</a>
                             <a href="{{ route('vapes.edit', $vape) }}" class="btn neon-btn">Editar</a>
                             <form action="{{ route('vapes.destroy', $vape) }}" method="POST" style="display:inline;">
                                 @csrf
@@ -42,16 +43,7 @@
             </tbody>
         </table>
 
-        <td>
-            <a href="{{ route('vapes.show', $vape) }}" class="btn neon-btn">Ver Detalles</a>
-            <a href="{{ route('vapes.edit', $vape) }}" class="btn neon-btn">Editar</a>
-            <form action="{{ route('vapes.destroy', $vape) }}" method="POST" style="display:inline;">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn neon-btn">Eliminar</button>
-            </form>
-        </td>
-        
+        <a href="{{ route('categories.index') }}" class="btn neon-btn">Ver Categorías</a>
 
         <form method="GET" action="{{ route('vapes.index') }}">
             <input type="text" name="search" placeholder="Buscar producto">

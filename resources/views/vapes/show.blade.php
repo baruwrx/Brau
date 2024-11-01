@@ -13,7 +13,7 @@
         @else
             <ul>
                 @foreach($comments as $comment)
-                    <li>{{ $comment->content }} - <strong>{{ $comment->user->name }}</strong></li> <!-- Asumiendo que tienes un modelo User relacionado -->
+                    <li>{{ $comment->content }} - <strong>{{ $comment->user->name }}</strong></li> 
                 @endforeach
             </ul>
         @endif

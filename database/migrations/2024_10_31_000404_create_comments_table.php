@@ -10,7 +10,7 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('vape_id')->constrained()->onDelete('cascade'); // Relación con la tabla vapes
+            $table->foreignId('vape_id')->constrained()->onDelete('cascade'); 
             $table->string('user_name'); 
             $table->text('comment'); 
             $table->timestamps();

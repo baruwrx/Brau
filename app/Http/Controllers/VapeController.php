@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class VapeController extends Controller
 {
+    public function create()
+    {
+        $categories = Category::all(); 
+        return view('vapes.create', compact('categories')); 
+    }
+
     public function show(Vape $vape)
     {
         $comments = $vape->comments; 
@@ -29,12 +35,6 @@ class VapeController extends Controller
 
         $vapes = $query->paginate(3);
         return view('vapes.index', compact('vapes', 'categories'));
-    }
-
-    public function create()
-    {
-        $categories = Category::all(); 
-        return view('vapes.create', compact('categories'));
     }
 
     public function store(Request $request)
@@ -77,6 +77,3 @@ class VapeController extends Controller
         return redirect()->route('vapes.index')->with('success', 'Vape eliminado correctamente.');
     }
 }
-
-
-

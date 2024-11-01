@@ -15,7 +15,7 @@
 
     <form action="{{ route('vapes.store') }}" method="POST">
         @csrf
-        
+
         <label for="category">Categoría:</label>
         <select name="category_id" required>
             <option value="">Selecciona una categoría</option>
